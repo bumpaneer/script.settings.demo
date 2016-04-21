@@ -1,0 +1,178 @@
+<window id="5525">
+		<defaultcontrol>1000</defaultcontrol>
+		<controls>
+				<include>CommonBackground</include>
+				<control type="image">
+						<left>0</left>
+						<top>100r</top>
+						<width>1280</width>
+						<height>100</height>
+						<texture>default/floor.png</texture>
+						<include>VisibleFadeEffect</include>
+				</control>
+				<control type="group">
+						<left>90</left>
+						<top>30</top>
+						<animation type="WindowOpen" reversible="false">
+								<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
+								<effect type="fade" start="0" end="100" time="300" />
+						</animation>
+						<animation type="WindowClose" reversible="false">
+								<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
+								<effect type="fade" start="100" end="0" time="300" />
+						</animation>
+						<control type="image">
+								<left>5</left>
+								<top>5</top>
+								<width>1090</width>
+								<height>630</height>
+								<texture border="15">default/ContentPanel.png</texture>
+						</control>
+						<control type="button">
+								<description>Close Window button</description>
+								<left>980</left>
+								<top>11</top>
+								<width>64</width>
+								<height>32</height>
+								<label>-</label>
+								<font>-</font>
+								<onclick>PreviousMenu</onclick>
+								<texturefocus>default/DialogCloseButton-focus.png</texturefocus>
+								<texturenofocus>default/DialogCloseButton.png</texturenofocus>
+								<onleft>1</onleft>
+								<onright>1</onright>
+								<onup>1</onup>
+								<ondown>1</ondown>
+								<visible>system.getbool(input.enablemouse)</visible>
+						</control>
+						<control type="image">
+								<description>LOGO</description>
+								<left>30</left>
+								<top>15</top>
+								<width>220</width>
+								<height>80</height>
+								<aspectratio>keep</aspectratio>
+								<texture>default/Logo.png</texture>
+						</control>
+						<control type="image">
+								<left>268</left>
+								<top>10</top>
+								<width>795</width>
+								<height>618</height>
+								<texture border="5">default/black-back2.png</texture>
+						</control>			
+						<control type="image">
+								<left>268</left>
+								<top>10</top>
+								<width>794</width>
+								<height>50</height>
+								<aspectratio>stretch</aspectratio>
+								<texture>default/dialogheader.png</texture>
+						</control>
+						<control type="image">
+								<left>5</left>
+								<top>625</top>
+								<width>1090</width>
+								<height>64</height>
+								<texture border="15">default/ContentPanelMirror.png</texture>
+						</control>
+						<!-- Main Menu (left) -->
+						<control type="list" id="1000">
+								<left>10</left>
+								<top>100</top>
+								<width>260</width>
+								<height>541</height>
+								<onleft>1500</onleft>
+								<pagecontrol>-</pagecontrol>
+								<scrolltime>300</scrolltime>
+								<itemlayout height="54" width="260">
+										<control type="image">
+												<left>0</left>
+												<top>0</top>
+												<width>260</width>
+												<height>55</height>
+												<texture border="5">default/MenuItemNF.png</texture>
+										</control>
+										<control type="label">
+												<left>10</left>
+												<top>0</top>
+												<width>240</width>
+												<height>55</height>
+												<font>font24_title</font>
+												<textcolor>FF505050</textcolor>
+												<align>right</align>
+												<aligny>center</aligny>
+												<label>$INFO[ListItem.Label]</label>
+										</control>
+								</itemlayout>
+								<focusedlayout height="54" width="260">
+										<control type="image">
+												<left>0</left>
+												<top>0</top>
+												<width>260</width>
+												<height>55</height>
+												<texture border="5">default/MenuItemFO.png</texture>
+												<animation effect="fade" end="50" time="10">Unfocus</animation>
+										</control>
+										<control type="label">
+												<left>10</left>
+												<top>0</top>
+												<width>240</width>
+												<height>55</height>
+												<font>font24_title</font>
+												<textcolor>white</textcolor>
+												<align>right</align>
+												<aligny>center</aligny>
+												<label>$INFO[ListItem.Label]</label>
+										</control>
+								</focusedlayout>
+						</control> 
+						<control type="label">
+								<description>header label</description>
+								<left>300</left>
+								<top>22</top>
+								<width>740</width>
+								<height>30</height>
+								<font>font16caps</font>
+								<label>$ADDON[script.settings.demo 600]</label>
+								<align>left</align>
+								<aligny>center</aligny>
+								<textcolor>white</textcolor>
+								<shadowcolor>black</shadowcolor>
+						</control>
+						<control type="image">
+								<left>269</left>
+								<top>510</top>
+								<width>793</width>
+								<height>2</height>
+								<texture>separator2.png</texture>
+						</control>
+						<control type="grouplist" id="3">
+								<description>button area</description>
+								<left>10</left>
+								<top>90</top>
+								<width>260</width>
+								<height>481</height>
+								<itemgap>-1</itemgap>
+								<onleft>5</onleft>
+								<onright>5</onright>
+								<onup>3</onup>
+								<ondown>20</ondown>
+						</control>
+				</control>
+				<control type="button" id="10">
+						<description>Default Category Button</description>
+						<height>60</height>
+						<width>260</width>
+						<textoffsetx>20</textoffsetx>
+						<align>right</align>
+						<aligny>center</aligny>
+						<font>font13_title</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus border="5">MenuItemFO.png</texturefocus>
+						<texturenofocus border="5">MenuItemNF.png</texturenofocus>
+						<pulseonselect>false</pulseonselect>
+				</control>			
+		</controls>
+</window>

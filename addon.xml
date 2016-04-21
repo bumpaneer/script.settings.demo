@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.settings.demo"
+       name="Settings-Demo"
+       version="0.0.1"
+       provider-name="bumpaneer">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.script"
+             library="default.py" />
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en">Demo Script</summary>
+    <description lang="en">Settings Demo Script</description>
+  </extension>
+</addon>
